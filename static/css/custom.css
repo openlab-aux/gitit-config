@@ -3,6 +3,19 @@
 
 /* Put your custom style modifications here: */
 
+/* Set fonts */
+
+@import url(../fonts/Ubuntu.css);
+@import url(../fonts/Arimo.css);
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Ubuntu, sans-serif;
+}
+
+body {
+    font-family: Arimo, Helvetica, sans-serif;
+}
+
 /* simplemde font monospaced */
 .CodeMirror pre {
   font-family: monospace;
