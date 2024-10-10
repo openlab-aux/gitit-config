@@ -83,6 +83,10 @@ td, th {
     background: var(--dark-bg-2);
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    background: var(--dark-bg-3);
+  }
+
   a:link {
     color: var(--dark-link);
   }
@@ -124,6 +128,10 @@ td, th {
   h6 > a:link, h6 > a:active, h6 > a:hover, h6 > a:focus, h6 > a:visited {
           color: var(--dark-fg);
           text-decoration: none;
+  }
+  /* and don’t give page title a lighter background color */
+  #content > h1:first-of-type {
+    background: var(--dark-bg-2);
   }
 
   /* view/edit/history/discuss links */
