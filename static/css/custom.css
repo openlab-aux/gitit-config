@@ -8,12 +8,31 @@
 @import url(../fonts/Ubuntu.css);
 @import url(../fonts/Arimo.css);
 
+:root {
+  --bg-3: #fff;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: Ubuntu, sans-serif;
 }
 
 body {
     font-family: Arimo, Helvetica, sans-serif;
+}
+
+/* logo */
+#logo img {
+  background-color: var(--bg-3);
+  border: 1px solid #ccc;
+}
+
+/* sidebar */
+.markupHelp {
+  background-color: var(--bg-3);
+  border: 1px solid #ccc;
+}
+.markupHelp {
+  padding: 0.3em;
 }
 
 /* simplemde font monospaced */
@@ -31,4 +50,96 @@ td, th {
 
 #content img {
   max-width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* csv variable for colors */
+  :root {
+    --dark-bg: #121212;
+    --dark-bg-2: #222222;
+    --dark-bg-3: #333333;
+    --dark-bg-4: #555555;
+    --dark-input: #666666;
+    --dark-fg: #eee;
+    --dark-border: #666;
+    --dark-link: #9ec0f6;
+    --dark-link-visited: #c5d1e5;
+  }
+
+  html {
+    color: var(--dark-fg);
+    background-color: var(--dark-bg);
+  }
+
+  /* table of contents */
+  div#TOC {
+    background-color: var(--dark-bg-3);
+    border: 1px solid var(--dark-border);
+   }
+
+
+  #content {
+    color: var(--dark-fg);
+    background: var(--dark-bg-2);
+  }
+
+  a:link {
+    color: var(--dark-link);
+  }
+  a:visited {
+    color: var(--dark-link-visited);
+  }
+
+
+  /* inputs */
+  textarea, input[type="text"], input[type="password"], select {
+    background: var(--dark-input);
+  }
+
+  /* logo */
+  #logo img {
+    background-color: var(--dark-bg-3);
+  }
+  /* sidebar */
+  #sidebar fieldset {
+    background-color: var(--dark-bg-3);
+  }
+  legend {
+    color: var(--dark-fg);
+  }
+  #sidebar input[type="submit"] {
+    background-color: var(--dark-bg-4);
+  }
+
+  .markupHelp {
+    background-color: var(--dark-bg-3);
+  }
+
+  /* Page title is a link but uses normal fg color */
+  h1 > a:link, h1 > a:active, h1 > a:hover, h1 > a:focus, h1 > a:visited,
+  h2 > a:link, h2 > a:active, h2 > a:hover, h2 > a:focus, h2 > a:visited,
+  h3 > a:link, h3 > a:active, h3 > a:hover, h3 > a:focus, h3 > a:visited,
+  h4 > a:link, h4 > a:active, h4 > a:hover, h4 > a:focus, h4 > a:visited,
+  h5 > a:link, h5 > a:active, h5 > a:hover, h5 > a:focus, h5 > a:visited,
+  h6 > a:link, h6 > a:active, h6 > a:hover, h6 > a:focus, h6 > a:visited {
+          color: var(--dark-fg);
+          text-decoration: none;
+  }
+
+  /* view/edit/history/discuss links */
+  ul.tabs li.selected {
+    border-bottom: 3px solid var(--dark-bg-2);
+  }
+  ul.tabs li {
+    background-color: var(--dark-bg-2);
+  }
+  ul.tabs li a {
+    text-decoration: none;
+    color: var(--dark-link);
+  }
+
+
+  body a {
+    color:  var(--dark-link);
+  }
 }
